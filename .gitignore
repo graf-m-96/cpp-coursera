@@ -1,0 +1,8 @@
+.vscode
+.idea
+build/
+a.out
+_input.txt
+_output.txt
+_expected.txt
+CMakeLists.txt
