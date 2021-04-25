@@ -65,12 +65,6 @@ ostream& operator<<(ostream& os, const map<K, V>& m) {
     return os << "}";
 }
 
-template <class K, class V>
-ostream& operator<<(ostream& os, const pair<K, V>& p) {
-    os << "{" << p.first << ": " << p.second;
-    return os << "}";
-}
-
 template <class T, class U>
 void AssertEqual(const T& t, const U& u, const string& hint = {}) {
     if (t != u) {
