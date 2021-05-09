@@ -13,17 +13,17 @@ using namespace std;
 #define AS_KV(x) #x << " = " << x
 
 #define ASSERT_EQUAL(x, y) {            \
-  ostringstream os;                     \
-  os << #x << " != " << #y << ", "      \
+  ostringstream _os;                    \
+  _os << #x << " != " << #y << ", "     \
     << __FILE__ << ":" << __LINE__;     \
-  AssertEqual(x, y, os.str());          \
+  AssertEqual(x, y, _os.str());         \
 }
 
 #define ASSERT(x) {                     \
-  ostringstream os;                     \
-  os << #x << " is false, "             \
+  ostringstream _os;                    \
+  _os << #x << " is false, "            \
     << __FILE__ << ":" << __LINE__;     \
-  Assert(x, os.str());                  \
+  Assert(x, _os.str());                 \
 }
 
 #define RUN_TEST(tr, func) \
@@ -116,4 +116,3 @@ void TestRunner::RunTest(TestFunc func, const string& test_name) {
         cerr << "Unknown exception caught" << endl;
     }
 }
-
